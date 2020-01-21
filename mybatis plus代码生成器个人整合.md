@@ -28,13 +28,12 @@ CREATE TABLE `user` (
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8 COMMENT='user代码生成测试';
 ```
-![enter description here](hbq.idse.top/blog/1579417388688.png)
-![enter description here](http://hbq.idse.top/blog/1579484643437.png)
+![1579417388688](http://hbq.idse.top/blog/1579417388688.png)
 4.  详细读一下README.md
 
 ## 二、基础配置
 + 分别配置两个application.properties中的数据源(配置后请重启idea)
-![enter description here](hbq.idse.top/blog/1579417198950.png)
+![1579417198950](http://hbq.idse.top/blog/1579417198950.png)
 
 ## 三、生成代码
 1. 启动CodeGeneratorApp
@@ -43,18 +42,18 @@ CREATE TABLE `user` (
 //访问路径，多个用 , 分开；如：tables=user,user2
 localhost:8081/generator/code?tables=user
 ```
-![enter description here](hbq.idse.top/blog/1579417703323.png)
+![1579417703323](http://hbq.idse.top/blog/1579417703323.png)
 3. 解压代码并复制到demo项目中（复制后请重启idea）
 + 解压
-![enter description here](hbq.idse.top/blog/1579417764927.png)
+![1579417764927](http://hbq.idse.top/blog/1579417764927.png)
 + 复制java代码
-![enter description here](hbq.idse.top/blog/1579417816721.png)
+![1579417816721](http://hbq.idse.top/blog/1579417816721.png)
 + 复制xml
-![enter description here](hbq.idse.top/blog/1579417882366.png)
+![1579417882366](http://hbq.idse.top/blog/1579417882366.png)
 
 ## 四、 测试生成代码
 1. swagger接口文档形式，浏览器访问http://localhost:8080/swagger-ui.html#/
-![enter description here](hbq.idse.top/blog/1579418248893.png)
+![1579418248893](http://hbq.idse.top/blog/1579418248893.png)
 2. postman测试，略
 
 ## 五、附加使用：分页插件（默认集成），条件查询，逻辑删除，时间戳自动新增和更新
@@ -67,14 +66,14 @@ where t.is_del=0
 </if>
 //Controler的swagger参数配置
 ```
-![enter description here](hbq.idse.top/blog/1579421105995.png)
+![1579421105995](http://hbq.idse.top/blog/1579421105995.png)
 
-![enter description here](hbq.idse.top/blog/1579421222814.png)
-+ 测试：![enter description here](hbq.idse.top/blog/1579421315620.png)
+![1579421222814](http://hbq.idse.top/blog/1579421222814.png)
++ 测试：![1579421315620](http://hbq.idse.top/blog/1579421315620.png)
 + 观察到执行sql：select * from user t   where t.is_del=0                       and t.name like '%bq%'   order by t.id desc LIMIT 0,2
 
 2. 逻辑删除：删除标志上直接加 @TableLogic 注解即可
-![enter description here](hbq.idse.top/blog/1579421442395.png)
+![1579421442395](http://hbq.idse.top/blog/1579421442395.png)
 
 3. 时间戳自动新增和更新
-![enter description here](hbq.idse.top/blog/1579427161876.png)
+![1579427161876](http://hbq.idse.top/blog/1579427161876.png)
