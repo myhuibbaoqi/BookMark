@@ -12,8 +12,9 @@
 ---
 
 ## 一. 分别引入生成器和模板（如报错或有提示警告，请确保配置maven3.6.1和jdk1.8，其他版本自测）。
-1. 从git创建文件：![enter description here](hbq.idse.top/blog/1579416380782.png)
-2. 分别填写上方地址：![enter description here](hbq.idse.top/blog/1579416525414.png)
+1. 从git创建文件：
+![1579416380782](http://hbq.idse.top/blog/1579416380782.png)
+2. 分别填写上方地址：![1579416525414](http://hbq.idse.top/blog/1579416525414.png)
 3. 引入数据库
 ```javascript?linenums
 CREATE TABLE `user` (
